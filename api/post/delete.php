@@ -1,9 +1,8 @@
 <?php
-header('Access_Control_Allow_Origin: *');
 header('Access_Control_Allow_Methods: DELETE');
 header('Access_Control_Allow_Headers: Access_Control_Allow_Headers, Content_Type, Access_Control_Allow_Methods, Authorization, X-Requested-With');
-header('Content-Type: application/json');
-include_once '../../core/initialize.php';
+require_once("../header.php");
+require_once('../../core/initialize.php');
 
 $post = new Post($db);
 $data = json_decode(file_get_contents("php://input"));
